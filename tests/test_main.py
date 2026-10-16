@@ -39,3 +39,8 @@ def test_type_inconnu():
 def test_call_id_manquant_refuse():
     r = client.post("/summarize", json={"text": "hello"})
     assert r.status_code == 422
+
+
+def test_texte_vide_refuse():
+    r = client.post("/summarize", json={"call_id": "call-1", "text": ""})
+    assert r.status_code == 422
