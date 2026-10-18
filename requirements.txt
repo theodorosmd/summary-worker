@@ -1,3 +1,4 @@
-fastapi[standard]
-litellm
+# Versions épinglées (voir intake-py/requirements.txt).
+fastapi[standard]==0.143.3
+litellm==1.105.1
 python-dotenv
